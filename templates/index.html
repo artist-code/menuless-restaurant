@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>메뉴리스 레스토랑</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>오늘의 재료</h1>
+    <form method="post">
+        {% for ingredient in ingredients %}
+            <input type="checkbox" name="ingredients" value="{{ ingredient }}"> {{ ingredient }}<br>
+        {% endfor %}
+        <br>
+        <input type="submit" value="요리 추천 받기">
+    </form>
+
+    {% if dish %}
+        <h2>추천 요리: {{ dish }}</h2>
+    {% endif %}
+</body>
+</html>
